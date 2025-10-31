@@ -1,0 +1,26 @@
+name: FTP Deploy to cPanel
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.5.0
+        with:
+          server: "institutodatatrends.com"
+          protocol: "ftp"
+          username: "instit14"
+          password: "I1tCt)9Gy[58wT"
+          port: 21
+          local-dir: "./"
+          server-dir: "/public_html/"
+          log-level: "standard"
