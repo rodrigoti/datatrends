@@ -20,7 +20,7 @@ jobs:
           protocol: "ftp"
           username: "instit14"
           password: "I1tCt)9Gy[58wT"
-          port: 21
+          port: 22
           local-dir: "./"
           server-dir: "/public_html/"
           log-level: "standard"
