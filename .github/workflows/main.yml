@@ -8,16 +8,7 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
 
-    - name: 🔍 Test FTP Connection
-      run: |
-        echo "Testando conexão FTP..."
-        apt-get update && apt-get install -y ftp
-        ftp -n <<EOF
-        open ftp.institutodatatrends.com
-        user instit14 ${{ secrets.FTP_PASSWORD }}
-        bye
-        EOF
-        echo "Teste FTP completo"
+
     
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.6
