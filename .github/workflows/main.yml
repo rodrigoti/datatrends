@@ -22,7 +22,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.6
       with:
-        server: ftp.institutodatatrends.com
+        server: institutodatatrends.com
         username: instit14
         password: I1tCt)9Gy[58wT
         server-dir: public_html/
