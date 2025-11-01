@@ -15,15 +15,12 @@ jobs:
 
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.0
-
         with:
-          server: ftp.institutodatatrends.com
-          username: instit14
+          server: "institutodatatrends.com"
+          protocol: "ftp"
+          username: "instit14"
           password: "I1tCt)9Gy[58wT"
           port: 21
-          passive: true
-          security: loose
-          timeout: 60000
-
-
-          
+          local-dir: "./"
+          server-dir: "/public_html/"
+          log-level: "standard"
